@@ -1,0 +1,21 @@
+.data-container {
+    display:flex;
+}
+
+.data-container>div{
+    flex:1;
+    margin: 0;
+    padding: 5px;
+}
+
+.missions-container{
+    background-color: rgb(242, 139, 130);
+}
+
+.relics-container{
+    background-color: rgb(204, 255, 144);
+}
+
+.primes-container{
+    background-color: rgb(174, 203, 250);
+}
