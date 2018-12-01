@@ -1,21 +1,41 @@
-.data-container {
+/* Main */
+body{
+    background-color:#fff;
+}
+
+/* Tabs */
+.steps-container {
     display:flex;
 }
-
-.data-container>div{
+.steps-container>button{
+    font-size:25px;
     flex:1;
-    margin: 0;
+    border: none;
+    outline:none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.steps-container>div{
+    flex:1;
     padding: 5px;
 }
-
-.missions-container{
+.tab{
+    display:none;
+}
+@media screen and (min-width:600px) {
+    .tab{
+        display:block;
+    }
+}
+.active-tab{
+    display:block;
+}
+.missions{
     background-color: rgb(242, 139, 130);
 }
-
-.relics-container{
+.relics{
     background-color: rgb(204, 255, 144);
 }
-
-.primes-container{
+.primes{
     background-color: rgb(174, 203, 250);
 }

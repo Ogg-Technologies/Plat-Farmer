@@ -5,22 +5,29 @@
     <meta charset="utf-8">
     <title>Plat Farmer - Ogg Technologies</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 
 <body>
     <div id="app">
-        <div class="data-container">
-            <div class="missions-container">
+        <div class="steps-container">
+            <button v-on:click="tabClicked('missions')" class="missions">Missions</button>
+            <button v-on:click="tabClicked('relics')" class="relics">Relics</button>
+            <button v-on:click="tabClicked('primes')" class="primes">Primes</button>
+        </div>
+        <div class="steps-container">
+            <div v-bind:class="{ 'active-tab': tabs.missions }" class="missions tab">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, cumque.</p>
             </div>
-            <div class="relics-container">
+            <div v-bind:class="{ 'active-tab': tabs.relics }" class="relics tab">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
             </div>
-            <div class="primes-container">
+            <div v-bind:class="{ 'active-tab': tabs.primes }" class="primes tab">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quisquam natus porro expedita, provident obcaecati placeat, quasi eaque accusantium aspernatur.</p>
             </div>
         </div>
     </div>
 </body>
+<script src="script.js"></script>
 
 </html>
