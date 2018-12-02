@@ -1,19 +1,14 @@
 var wm = new Vue({
     el: '#app',
     data: {
-        tabs: {
-            "missions": false,
-            "relics": false,
-            "primes": true
-        },
+        currentTab: "missions",
         missions: missionsDataJson,
         relics: [],
         primes: [],
     },
     methods: {
         tabClicked(tabName) {
-            Object.keys(this.tabs).forEach(v => this.tabs[v] = false);
-            this.tabs[tabName] = true;
+            this.currentTab = tabName;
         },
     },
     created: function(){

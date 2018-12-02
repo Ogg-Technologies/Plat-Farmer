@@ -18,21 +18,21 @@
         <div class="steps-container">
 
             <!-- Tab for all Missions -->
-            <div v-bind:class="{ 'active-tab': tabs.missions }" class="missions tab">
+            <div v-bind:class="{ 'active-tab': currentTab==='missions' }" class="missions tab">
                 <div v-for="entry in missions">
                     {{entry.name}}
                 </div>
             </div>
 
             <!-- Tab for all Relics -->
-            <div v-bind:class="{ 'active-tab': tabs.relics }" class="relics tab">
+            <div v-bind:class="{ 'active-tab': currentTab==='relics' }" class="relics tab">
                 <div v-for="relic in relics">
                     {{relic.Name}}
                 </div>
             </div>
 
             <!-- Tab for all Primes -->
-            <div v-bind:class="{ 'active-tab': tabs.primes }" class="primes tab">
+            <div v-bind:class="{ 'active-tab': currentTab==='primes' }" class="primes tab">
                 <div v-for="prime in primes">
                     {{prime.Name}} : {{prime.EstimatedVaultedDate}}
                 </div>
