@@ -13,8 +13,8 @@ def download_json(url):
 
 
 def write_data_as_js(file_name, data):
-    with open("data/"+file_name, "w") as f:
-        data_str = "var primesDataJson = "
+    with open("data/"+file_name+".js", "w") as f:
+        data_str = "var " + file_name + " = "
         data_str += json.dumps(data)
         f.write(data_str)
 
@@ -26,6 +26,6 @@ primes_json = primes_json["data"]
 missions_json = download_json(missions_url)
 
 # Write the primes
-write_data_as_js("primesDataJson.js", primes_json)
+write_data_as_js("primesDataJson", primes_json)
 # Write the missions
-write_data_as_js("missionsDataJson.js", missions_json)
+write_data_as_js("missionsDataJson", missions_json)

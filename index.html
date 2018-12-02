@@ -16,18 +16,33 @@
             <button v-on:click="tabClicked('primes')" class="primes">Primes</button>
         </div>
         <div class="steps-container">
+
+            <!-- Tab for all Missions -->
             <div v-bind:class="{ 'active-tab': tabs.missions }" class="missions tab">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, cumque.</p>
+                <div v-for="entry in missions">
+                    {{entry.name}}
+                </div>
             </div>
+
+            <!-- Tab for all Relics -->
             <div v-bind:class="{ 'active-tab': tabs.relics }" class="relics tab">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                <div v-for="relic in relics">
+                    {{relic.Name}}
+                </div>
             </div>
+
+            <!-- Tab for all Primes -->
             <div v-bind:class="{ 'active-tab': tabs.primes }" class="primes tab">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quisquam natus porro expedita, provident obcaecati placeat, quasi eaque accusantium aspernatur.</p>
+                <div v-for="prime in primes">
+                    {{prime.Name}} : {{prime.EstimatedVaultedDate}}
+                </div>
             </div>
+
         </div>
     </div>
 </body>
+<script src="data/missionsDataJson.js"></script>
+<script src="data/primesDataJson.js"></script>
 <script src="script.js"></script>
 
 </html>

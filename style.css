@@ -1,41 +1,50 @@
 /* Main */
-body{
-    background-color:#fff;
+body {
+    background-color: #fff;
 }
 
 /* Tabs */
 .steps-container {
-    display:flex;
+    display: flex;
 }
-.steps-container>button{
-    font-size:25px;
-    flex:1;
+
+.steps-container>button {
+    font-size: 25px;
+    flex: 1;
     border: none;
-    outline:none;
+    outline: none;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
-.steps-container>div{
-    flex:1;
+
+.steps-container>div {
+    flex: 1;
     padding: 5px;
 }
-.tab{
-    display:none;
+
+.tab {
+    display: none;
+    overflow: hidden;
 }
+
 @media screen and (min-width:600px) {
-    .tab{
-        display:block;
+    .tab {
+        display: block;
     }
 }
-.active-tab{
-    display:block;
+
+.active-tab {
+    display: block;
 }
-.missions{
+
+.missions {
     background-color: rgb(242, 139, 130);
 }
-.relics{
+
+.relics {
     background-color: rgb(204, 255, 144);
 }
-.primes{
+
+.primes {
     background-color: rgb(174, 203, 250);
 }
