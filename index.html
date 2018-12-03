@@ -33,8 +33,8 @@
 
             <!-- Tab for all Primes -->
             <div v-bind:class="{ 'active-tab': currentTab==='primes' }" class="primes tab">
-                <div v-for="prime in primes">
-                    {{prime.Name}} : {{prime.EstimatedVaultedDate}}
+                <div v-for="prime in displayedPrimes">
+                    {{prime.Name}} : {{prime.plat.toFixed(2)}}
                 </div>
             </div>
 
