@@ -26,15 +26,15 @@
 
             <!-- Tab for all Relics -->
             <div v-bind:class="{ 'active-tab': currentTab==='relics' }" class="relics tab">
-                <div v-for="relic in relics">
-                    {{relic.Name}}
+                <div v-for="relic in displayedRelics">
+                    {{relic.Name}} : {{relic.plat.toFixed(2)}} p
                 </div>
             </div>
 
             <!-- Tab for all Primes -->
             <div v-bind:class="{ 'active-tab': currentTab==='primes' }" class="primes tab">
                 <div v-for="prime in displayedPrimes">
-                    {{prime.Name}} : {{prime.plat.toFixed(2)}}
+                    {{prime.Name}} : {{prime.plat.toFixed(2)}} p
                 </div>
             </div>
 
